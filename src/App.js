@@ -22,7 +22,7 @@ function App() {
         .catch(err => {
           console.log(err)
         })
- })
+ }, [])
   return (
     <div className="App">
      <Title nasaTitle= {nasaTitle} nasaInfo = {nasaInfo} nasaDate = {nasaDate} />
