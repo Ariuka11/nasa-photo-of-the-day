@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: linear-gradient(to right, #de6262, #ffb88c);
+  
 }
 
 
@@ -15,6 +15,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.jumbotron{
+  margin-bottom: 0px;
+}
+.img-fluid{
+  border-radius: 50px;
+}
 
 
