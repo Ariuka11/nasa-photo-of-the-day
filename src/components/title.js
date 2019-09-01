@@ -2,7 +2,7 @@ import React from 'react'
 import {Accordion, Card,Jumbotron,Button } from 'react-bootstrap'
 
 function Title({nasaTitle, nasaInfo }){
-    return  <div>
+    return <div>
             <Jumbotron>
                 <h1>Today's NASA picture!</h1>
                 <p>
@@ -11,18 +11,18 @@ function Title({nasaTitle, nasaInfo }){
                 <h2>{nasaTitle}</h2> 
                     <p>
                 </p>
-            </Jumbotron>
-                <Accordion defaultActiveKey="0">
-                    <Card>
-                    <Accordion.Toggle as={Card.Header} eventKey="0">
-                        <Button variant="primary">Learn more</Button>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="0">
-                        <Card.Body>{nasaInfo}</Card.Body>
-                    </Accordion.Collapse>
-                    </Card>
-                </Accordion> 
-            </div>    
+            </Jumbotron>    
+            <Accordion defaultActiveKey="0">
+                <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="0">
+                    <Button variant="primary">Learn more</Button>
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="0">
+                    <Card.Body>{nasaInfo}</Card.Body>
+                </Accordion.Collapse>
+                </Card>
+            </Accordion> 
+        </div>    
 }
 
 export default Title;

@@ -13,7 +13,12 @@ function App() {
  const [nasaInfo, setNasaInfo] = useState();
  const [nasaDate, setNasaDate] = useState();
  const [nasaCopyright, setNasaCopyright] = useState();
-// const [datas, setDatas] = useState();
+  const [search, setSearch] = useState();
+
+  const searchWord = e => {
+    setSearch(e.target.value)
+  }
+
  useEffect(() => {
    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
         .then(res => {
@@ -40,7 +45,7 @@ function App() {
             <Nav.Link href="#contact">Contact</Nav.Link>  
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange = {searchWord} />
             <Button variant="outline-info">Search</Button>
           </Form>
         </Navbar>
